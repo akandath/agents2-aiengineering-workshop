@@ -1,0 +1,48 @@
+# Notes from AI engineering workshop
+
+- agents are programs where LLM outputs control workflow
+- it involves the following
+    - multiple llm calls
+    - llms can use tools
+    - environment where llms can interact
+    - planner to coordinate activity
+    - autonomy
+- LLMs today can't do too well on the HLE (humanity's last exam) benchmark. Agents with chain of thought and other back and forth reasoning abilities can do considerably well on these
+- agents are good at repatitive tasks, automate/augment tasks
+- there are significant tailwinds in this world today to create agentic systems
+- Basic tasks:
+    - code generation - team of Software developers
+    - medical diagnosis
+    - scientific literature review
+    - design and run experiments/do literature review
+    - replace enterprise tasks like customer support
+- types of agentic systems:
+    - workflow: predefined paths where LLMs are orchestrated
+    - agents: LLMs dynamically decide how to proceed
+- llm doesnt necessarily look into the file system. actually, the code interacts with the llm to get the 'commands' to learn what to do. then the code does the tasks.
+- risks
+    - unpredicable path, output and costs
+    - this can be controlled by proper monitoring
+    - guardrails that ensure that agents work ethically
+- few frameworks
+    - no framework (conect via APIs) (BASIC)
+    - MCP (connect agents with data sources) (BASIC)
+        * removes the need for glue code
+        * think of USB C that connects different components
+    - OpenAI Agents SDK (MED)
+    - CrewAI - used for multi agent systems. used with yaml files (configs) (idk what this means but let's wait) (MED)
+    - Langgraph (ADVANCED)
+    - AutoGen (ADVANCED)
+
+# OpenAI Agents SDK
+- Its lightweight, easy to use
+- terminologies:
+    - agents - represent LLMs
+    - handoffs - represdent interaction
+    - guradrails - controls
+- 3 steps to create agents in OpenAI SDK
+    - create instance of agent called Agent
+    - context manager called trace() to describe what to do
+    - Runner.run() kick off the workflow
+
+# Coding exercise 1 - creating deep research
