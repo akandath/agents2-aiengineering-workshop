@@ -86,3 +86,4 @@
 
 - Give agents coding skills
 - building an engineering team (engineering lead, backend engineer, frontend engineer, test engineer)
+- syntax is very important, it can get clunky otherwise
