@@ -46,3 +46,16 @@
     - Runner.run() kick off the workflow
 
 # Coding exercise 1 - creating deep research
+
+- Pydantic - write schema to define how the output should look like.
+
+- workflow design patterns (building effective agents)
+    - prompt chaining - decompose into fixed substask (in -> llm1 -> [gate] -> llm2 -> llm3 -> out)
+        * there is more control, you can check traces
+        * there can be guardrails for each step, easier to debug
+        * for example content creation pipeline (create outline -> [check for brand guidelines] -> write a draft -> polish + SEO -> output)
+    - routing - direct an input to a specialized sub task (in -> router routes to [LLM1] [LL2] -> out)
+        * eg - medical situations (query of medical info, router routes to different 'specialist' agent)
+    - parallelization - break down tasks and run substacks concurrently
+        * similar to routing, but you have a coordinator (code) and an aggregator (code)
+        * differnet agents can be doing the same sub tasks, and the aggregator can do some operation on that or choose the best (whatever best means)
