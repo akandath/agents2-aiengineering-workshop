@@ -59,3 +59,30 @@
     - parallelization - break down tasks and run substacks concurrently
         * similar to routing, but you have a coordinator (code) and an aggregator (code)
         * differnet agents can be doing the same sub tasks, and the aggregator can do some operation on that or choose the best (whatever best means)
+    - Orchestrator-worker - complex tasks are broken down and done systematically
+        * different llms in specific tasks, similar to parallelization
+    - evaluator - optimizer - LLM output is validated by another
+        * diagram: input -> generator and evaluator do back and forth -> accepted -> output
+        * code generation and review is an example. education content generation, the evaluator looks at whether the output is complient with kids, relevant etc
+
+- by contrast, agents:
+    - open-ended
+    - there is a feedback loop
+    - costs could be higher
+    - there is no fixed path
+
+    In general, they are flexible within an environment, and the environment can be very loosely defined. it then takes some action or it reaches the end state
+
+# CrewAI
+- Agent - autonomous unit (say LLM) with a role, goal, backstory, memory, tools
+- Tasks - a specific assignment to be carried out; has description, expected output, agent
+- Crew - a team of agents and tasks that run sequentially or hierarchical 
+
+- 5 steps of crewAI project
+    - create a project: crewai create crew my_project
+    - fill yaml files for config to define agents and tasks
+    - complete crew.py module to create Agents, Tasks and Crew, referencing the config`
+    - update main.py to set inputs
+
+- Give agents coding skills
+- building an engineering team (engineering lead, backend engineer, frontend engineer, test engineer)
