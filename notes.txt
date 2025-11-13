@@ -112,3 +112,9 @@
         * client: lives inside the host and connects 1:1 to MCP server (each client is connected with one server)
         * server: provides tools, context, prompts etc
     Example: Google maps (MCP server) with goelocation tools. We can configure the host (claude desktop) to run the mcp client and then launches the google maps MCP server on the computer
+
+- misconception: mcp runs remotely: not particularly. most commone scenario is that you download the server on a local system and then run it
+- why make an MCP server?
+    - allows you to share it with other and help them incorporate tools and resources
+    - consistently incorporate all MCPs - if an applications call on a bunch of MCPs, there could be an inconsistency
+    
