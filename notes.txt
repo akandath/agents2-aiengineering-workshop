@@ -79,7 +79,7 @@
 - Crew - a team of agents and tasks that run sequentially or hierarchical 
 
 - 5 steps of crewAI project
-    - create a project: crewai create crew my_project
+    - create a project: 'crewai create crew my_project'
     - fill yaml files for config to define agents and tasks
     - complete crew.py module to create Agents, Tasks and Crew, referencing the config`
     - update main.py to set inputs
@@ -87,3 +87,28 @@
 - Give agents coding skills
 - building an engineering team (engineering lead, backend engineer, frontend engineer, test engineer)
 - syntax is very important, it can get clunky otherwise
+
+# MCP
+
+- Model context Protocol - USB C for agentic applications
+- It is not:
+    - a framework fpr building agents
+    - fundamental change to how agents work
+    - way to code agents
+- It is:
+    - a protocol - a standard
+    - simple way to integrate tools, resources, prompts
+- Reasons not to be excited
+    - lanchain has big tool ecosystem
+    - its just a standard
+    - you can alread make functions into tools
+- Reasons to be excited
+    - makes it frictionless to integrate
+    -it is taking off
+
+- Core concepts:
+    - 3 key components:
+        * host - LLM app like claude or an agentic architecture
+        * client: lives inside the host and connects 1:1 to MCP server (each client is connected with one server)
+        * server: provides tools, context, prompts etc
+    Example: Google maps (MCP server) with goelocation tools. We can configure the host (claude desktop) to run the mcp client and then launches the google maps MCP server on the computer
